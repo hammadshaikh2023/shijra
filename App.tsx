@@ -19,9 +19,10 @@ import { Logo } from './components/Logo';
 import { LoginModal } from './components/LoginModal';
 import { AdvancedSearchFilter } from './components/AdvancedSearchFilter';
 import { PhotoAnimator } from './components/PhotoAnimator';
+import { HintsNotification } from './components/HintsNotification';
 import { 
   Mic, Share2, Printer, Star, MessageCircle, Clock, 
-  Search, LogOut, LayoutDashboard, User, ShieldCheck
+  Search, LogOut, LayoutDashboard, User, ShieldCheck, Zap
 } from 'lucide-react';
 import { FamilyMember } from './types';
 
@@ -99,24 +100,15 @@ export default function App() {
           <div className="hidden md:flex items-center gap-10">
             {!isLoggedIn ? (
               <>
-                <button 
-                  onClick={() => navigateTo('FEATURES')} 
-                  className={`text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${currentView === 'FEATURES' ? 'text-gold-400' : 'text-slate-400 hover:text-white'}`}
-                >
-                  Features
-                </button>
-                <button 
-                  onClick={() => navigateTo('PRICING')} 
-                  className={`text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${currentView === 'PRICING' ? 'text-gold-400' : 'text-slate-400 hover:text-white'}`}
-                >
-                  Pricing
-                </button>
+                <button onClick={() => navigateTo('FEATURES')} className={`text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${currentView === 'FEATURES' ? 'text-gold-400' : 'text-slate-400 hover:text-white'}`}>Features</button>
+                <button onClick={() => navigateTo('PRICING')} className={`text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${currentView === 'PRICING' ? 'text-gold-400' : 'text-slate-400 hover:text-white'}`}>Pricing</button>
                 <div className="h-4 w-px bg-white/10" />
                 <Button variant="ghost" onClick={() => setShowLoginModal(true)} className="!py-2 !px-5 text-[10px] uppercase font-bold">Login</Button>
                 <Button variant="secondary" onClick={() => navigateTo('SIGNUP')} className="!py-2 !px-6 text-[10px] uppercase font-black shadow-lg shadow-gold-500/20">Get Started</Button>
               </>
             ) : (
               <div className="flex items-center gap-6">
+                <HintsNotification treeId="ahmed-archive" />
                 <button onClick={() => navigateTo('DASHBOARD')} className={`text-[10px] font-bold uppercase tracking-widest ${currentView === 'DASHBOARD' ? 'text-gold-400' : 'text-slate-500'}`}>Dashboard</button>
                 <button onClick={() => setShowSearch(true)} className="text-slate-400 hover:text-white transition-colors"><Search size={18} /></button>
                 <button onClick={() => setShowTimeline(true)} className="text-slate-400 hover:text-emerald-400 transition-colors"><Clock size={18} /></button>
@@ -136,27 +128,6 @@ export default function App() {
               onStartRecord={() => navigateTo('SIGNUP')} 
               onViewDemo={() => setShowDemo(true)} 
             />
-            <section className="py-24 container mx-auto px-6 text-center">
-              <h2 className="text-4xl font-serif text-white mb-12 italic">Preserving the Unspoken</h2>
-              <div className="grid md:grid-cols-3 gap-12">
-                <div className="p-8 bg-white/5 rounded-3xl border border-white/5">
-                  <Mic className="text-gold-400 mx-auto mb-6" size={32} />
-                  <h3 className="text-xl font-serif mb-3 text-white">Voice Archive</h3>
-                  <p className="text-slate-400 text-sm font-light">Elders speak, history listens.</p>
-                </div>
-                <div className="p-8 bg-white/5 rounded-3xl border border-white/5">
-                  <Share2 className="text-emerald-400 mx-auto mb-6" size={32} />
-                  <h3 className="text-xl font-serif mb-3 text-white">Interactive Topology</h3>
-                  <p className="text-slate-400 text-sm font-light">Connections mapped in light.</p>
-                </div>
-                <div className="p-8 bg-white/5 rounded-3xl border border-white/5">
-                  <ShieldCheck className="text-blue-400 mx-auto mb-6" size={32} />
-                  <h3 className="text-xl font-serif mb-3 text-white">Digital Haveli</h3>
-                  <p className="text-slate-400 text-sm font-light">Secure ancestral sanctuary.</p>
-                </div>
-              </div>
-              <button onClick={() => navigateTo('FEATURES')} className="mt-16 text-[11px] font-bold uppercase tracking-[0.3em] text-gold-400 hover:text-white transition-colors border-b border-gold-400/30 pb-2">Discover Full Capabilities</button>
-            </section>
           </div>
         )}
 
@@ -173,7 +144,7 @@ export default function App() {
             <div className="flex items-center justify-between mb-16">
                <div>
                  <div className="flex items-center gap-2 text-gold-400 text-[10px] font-black uppercase tracking-[0.3em] mb-3">
-                   <LayoutDashboard size={12} /> Lineage Workspace
+                   <Zap size={12} className="animate-pulse" /> Vercel Edge Active
                  </div>
                  <h1 className="text-5xl font-serif font-bold text-white leading-tight italic">Ahmed <span className="text-slate-600 not-italic font-light">Archive</span></h1>
                </div>
@@ -224,7 +195,6 @@ export default function App() {
       <footer className="bg-navy-950/80 backdrop-blur-3xl border-t border-white/5 py-20 text-center">
         <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 text-left mb-16">
           <div className="md:col-span-1 flex flex-col items-start">
-            {/* Updated logo to be highly visible (w-24) with doubled footprint as requested */}
             <Logo withText={true} vertical={true} className="w-24 h-24 mb-6" />
           </div>
           <div>

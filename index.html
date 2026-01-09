@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_VERIFICATION_CODE" />
+
+    <!-- Primary SEO -->
+    <title>Shijra | The Digital Sanctuary for Your Family Legacy</title>
+    <meta name="description" content="Don't let your family's stories fade away. Shijra helps you build a timeless digital family tree, record oral histories, and preserve your lineage for generations to come. Start your legacy today.">
+    <meta name="keywords" content="family tree, genealogy, ancestry, oral history, lineage, digital heritage, shijra, family history recording">
+    <meta name="author" content="Shijra Inc.">
+    <meta name="theme-color" content="#020617">
+    <link rel="canonical" href="https://shijra.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shijra.app/">
+    <meta property="og:title" content="Shijra | Build Your Family's Digital Legacy">
+    <meta property="og:description" content="Secure your ancestors' stories before they are lost. The most beautiful way to visualize lineage and record voice memories.">
+    <meta property="og:image" content="https://shijra.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shijra.app/">
+    <meta property="twitter:title" content="Shijra | Build Your Family's Digital Legacy">
+    <meta property="twitter:description" content="Secure your ancestors' stories before they are lost. The most beautiful way to visualize lineage and record voice memories.">
+    <meta property="twitter:image" content="https://shijra.app/twitter-image.jpg">
+    
+    <!-- Fonts: Inter (Sans) and Playfair Display (Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              navy: {
+                800: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+              },
+              emerald: {
+                800: '#065f46',
+                900: '#064e3b',
+                950: '#022c22',
+              },
+              gold: {
+                300: '#fcd34d',
+                400: '#fbbf24',
+                500: '#f59e0b',
+              },
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'slow-spin': 'spin 20s linear infinite',
+              'light-leak': 'light-leak 15s linear infinite',
+              'check-pop': 'check-pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+              'pulse-glow': 'pulseGlow 3s infinite ease-in-out',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'light-leak': {
+                '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+                '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+              },
+              'check-pop': {
+                '0%': { opacity: '0', transform: 'scale(0.5)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #e2e8f0;
+        overflow-x: hidden;
+      }
+      .glass-card {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* CUSTOM PROFESSIONAL SCROLLBAR */
+      /* Width and overall sizing */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      /* The track (background) - Dark Emerald to match website palette */
+      ::-webkit-scrollbar-track {
+        background: #022c22; 
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      /* The thumb (the draggable bar) - Gold matching the 'Get Started' button */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+        border-radius: 20px;
+        border: 2px solid #022c22; /* Adds a clean spacing effect around the thumb */
+        transition: background 0.3s ease;
+      }
+
+      /* Hover effect for the thumb */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #fcd34d;
+      }
+
+      /* Scrollbar corner where horizontal and vertical meet */
+      ::-webkit-scrollbar-corner {
+        background: #020617;
+      }
+      
+      /* Firefox support */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #fbbf24 #022c22;
+      }
+    </style>
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://shijra.app/#organization",
+          "name": "Shijra",
+          "url": "https://shijra.app",
+          "logo": "https://shijra.app/logo.png",
+          "sameAs": [
+            "https://twitter.com/shijraapp",
+            "https://instagram.com/shijraapp"
+          ],
+          "description": "A digital platform dedicated to preserving family histories through interactive trees and oral history recording."
+        }
+      ]
+    }
+    </script>
+
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "d3": "https://aistudiocdn.com/d3@^7.9.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1",
+    "jspdf": "https://aistudiocdn.com/jspdf@^2.5.1",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?external=react,react-dom",
+    "react-native": "https://aistudiocdn.com/react-native@^0.82.1",
+    "react-native-safe-area-context": "https://aistudiocdn.com/react-native-safe-area-context@^5.6.2",
+    "@react-navigation/bottom-tabs": "https://aistudiocdn.com/@react-navigation/bottom-tabs@^7.8.12",
+    "@react-navigation/native-stack": "https://aistudiocdn.com/@react-navigation/native-stack@^7.8.6",
+    "@react-navigation/native": "https://aistudiocdn.com/@react-navigation/native@^7.1.25",
+    "expo-linear-gradient": "https://aistudiocdn.com/expo-linear-gradient@^15.0.8",
+    "@expo/vector-icons": "https://aistudiocdn.com/@expo/vector-icons@^15.0.3",
+    "expo-blur": "https://aistudiocdn.com/expo-blur@^15.0.8",
+    "expo-font": "https://aistudiocdn.com/expo-font@^14.0.10",
+    "react-native-reanimated": "https://aistudiocdn.com/react-native-reanimated@^4.2.0",
+    "expo-status-bar": "https://aistudiocdn.com/expo-status-bar@^3.0.9",
+    "express": "https://aistudiocdn.com/express@^5.2.1",
+    "buffer": "https://aistudiocdn.com/buffer@^6.0.3",
+    "multer": "https://aistudiocdn.com/multer@^2.0.2",
+    "@aws-sdk/client-s3": "https://aistudiocdn.com/@aws-sdk/client-s3@^3.947.0",
+    "crypto": "https://aistudiocdn.com/crypto@^1.0.1",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "pg": "https://aistudiocdn.com/pg@^8.16.3",
+    "joi": "https://aistudiocdn.com/joi@^18.0.2",
+    "socket.io-client": "https://aistudiocdn.com/socket.io-client@^4.7.5",
+    "socket.io": "https://aistudiocdn.com/socket.io@^4.8.1",
+    "http": "https://aistudiocdn.com/http@^0.0.1-security",
+    "fs": "https://aistudiocdn.com/fs@^0.0.1-security",
+    "electron": "https://aistudiocdn.com/electron@^39.2.7",
+    "expo-local-authentication": "https://aistudiocdn.com/expo-local-authentication@^17.0.8"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
